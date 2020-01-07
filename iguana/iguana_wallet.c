@@ -1519,6 +1519,7 @@ THREE_STRINGS(bitcoinrpc,encryptwallet,passphrase,password,permanentfile)
     //iguana_walletinitcheck(myinfo,coin);
     myinfo->dirty = (uint32_t)time(NULL);
     myinfo->expiration = 0;
+    retstr = "";
     return(retstr);
 }
 
