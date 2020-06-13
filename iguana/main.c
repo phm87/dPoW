@@ -2259,8 +2259,10 @@ void iguana_main(void *arg)
         else
         {
             // this means that an elected file was specified for 3rd party network, so use diffrent RPC port. 
-	    if (strcmp((char *)arg,"3rd_party_S3") == 0)
+	    if (strcmp((char *)arg,"3rd_party_S3") == 0)	{
+		printf("Port 7787");
             	myinfo->rpcport = 7787;
+	        }
 	    else
 		myinfo->rpcport = IGUANA_NOTARYPORT2;
             myinfo->IAMNOTARY = 1;
