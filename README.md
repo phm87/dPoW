@@ -110,18 +110,21 @@ The Hush3 3rd party server iguana will use the port 7787.
 
 Create wp_7787 file inside the `~/HdPoW/iguana` directory with the same passphrase you used to generate your 3rd Party address/pubkey of S3. The file should look as follows (replace YOUR_VERY_SECURE_PASSPHRASE with your own of S3):
 
-``shell
+``
 curl --url "http://127.0.0.1:7787" --data "{\"method\":\"walletpassphrase\",\"params\":[\"YOUR_VERY_SECURE_PASSPHRASE\", 9999999]}"
 ``
+
 4.2 Make wp_7787 executable
-``shell
+``
 chmod 700 wp_7779
 ``
+
 4.3 configure pubkey.txt inside ~/HdPow/iguana
 You will need to create a `pubkey.txt` file inside `~/HdPoW/iguana directory`. This file will be used to start the dPoW process in the dpowassets script later on. `pubkey.txt` file should contain only the pubkey of the appropriate server. The file should contain only the information in the example below. Change 02a854251adfee222bede8396fed0756985d4ea905f72611740867c7a4ad6488c1 to the appropriate pubkey for the server the file is on.
-``shell
+``
 pubkey=02a854251adfee222bede8396fed0756985d4ea905f72611740867c7a4ad6488c1
 ``
+
 Remark: the pubkey set on komodo daemon will remain the S4 pubkey so please do not change your start script nor the content of pubkey.txt. UTXO split should be performed using S4 keys and using S3 keys.
 
 4.4 UTXO split
