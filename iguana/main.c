@@ -2251,10 +2251,11 @@ void iguana_main(void *arg)
         }
         else if ( strncmp((char *)arg,"notary",strlen("notary")) == 0 ) // must be second to last
         {
-            myinfo->rpcport = IGUANA_NOTARYPORT;
+            myinfo->rpcport = 7787;
             myinfo->nosplit = 1;
             myinfo->IAMNOTARY = 1;
             myinfo->DEXEXPLORER = 0;//1; disable as SPV is used now
+            elected = (char *)arg;
         }
         else
         {
