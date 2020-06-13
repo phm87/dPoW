@@ -158,7 +158,7 @@ It is recommanded to launch iguana into a screen or tmux.
 
 ``
 cd ~/HdPow/iguana
-./m_notary_3rd_party_S3
+./m_notary_3rdparty_S3
 ``
 
 7. Verify that each iguana is able to notarize
