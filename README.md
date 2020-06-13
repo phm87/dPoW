@@ -182,7 +182,7 @@ blockindex.0 allocate bp for CHIPS ht.6403100 -> KMD
 [4] notarize CHIPS->KMD 0000000000000bdec7812d81d00143185f3a8a0d2a83edfe077872ddc7184cd8 ht.6403100 minsigs.13 duration.300 start.1592080430 MoM[100] 9a8345869c949f9abdb87d5150153d8eacc84485065fc6dac3ad430c31442b8e CCid.0
 KMD (10000, "RUjf7qQkUcVjkVeBgbrhCE4CpDH7fRuGyU") dpowlistunspent.([])
 CHIPS (10000, "RUjf7qQkUcVjkVeBgbrhCE4CpDH7fRuGyU") dpowlistunspent.([{"txid":"0d214a3fd7442755c403360a03f975881bdd833fd56fa20978ed547dcd8b22e0","vout":15,"generated":false,"address":"RUjf7qQkUcVjkVeBgbrhCE4CpDH7fRuGyU","amount":0.00010000,"scriptPubKey":"2103889a10f9df2caef57220628515693cf25316fe1b0693b0241419e75d0d0e66edac","spendable":true}])
-[CHIPS] : chosen = 0  out of 1 loop.(10)
+[CHIPS] : chosen = 3  out of 12 loop.(1)
 PAXWDCRC.5361b524 myind.4 isratify.0 DPOW.CHIPS statemachine checkpoint.6403100 0000000000000bdec7812d81d00143185f3a8a0d2a83edfe077872ddc7184cd8 start.1592080488+dur.300 vs 1592080488 MoM[100] 9a8345869c949f9abdb87d5150153d8eacc84485065fc6dac3ad430c31442b8e
 wrong senderind.22
 wrong senderind.22
