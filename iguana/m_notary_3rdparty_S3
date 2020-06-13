@@ -5,7 +5,7 @@
 komodo-cli lockunspent true `komodo-cli listlockunspent | jq -c .` 
 
 # Start 3rd party iguana, no split is default on this branch. This uses RPC port 7787, allows 2 iguana on same OS, incase OP does not have capacity to use 2 VM or 2 servers. 
-stdbuf -oL $1 ../agents/iguana 3rd_party & #> iguana.log 2> error.log  &
+stdbuf -oL $1 ../agents/iguana 3rd_party_S3 & #> iguana.log 2> error.log  &
 
 myip=`curl -s4 checkip.amazonaws.com`
 source pubkey.txt
