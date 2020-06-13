@@ -105,15 +105,17 @@ https://docs.komodoplatform.com/notary/setup-Komodo-Notary-Node.html#_3rd-party-
 
 See link mentionned at step 1 for details.
 
-3. Install iguana for Hush3 with the same user
+3. Import your S3 3P Compressed private key into KMD and Hush3, import your S3 3P Compressed private key related to Game into gamecredits
+
+4. Install iguana for Hush3 with the same user
 
 ``
 git clone https://github.com/phm87/dPow -b HushNN HdPow
 ``
 
-4. Configure iguana with your S3 key
+5. Configure iguana with your S3 key
 
-4.1 Create wp_7787
+5.1 Create wp_7787
 
 The Hush3 3rd party server iguana will use the port 7787.
 
@@ -123,25 +125,43 @@ Create wp_7787 file inside the `~/HdPoW/iguana` directory with the same passphra
 curl --url "http://127.0.0.1:7787" --data "{\"method\":\"walletpassphrase\",\"params\":[\"YOUR_VERY_SECURE_PASSPHRASE\", 9999999]}"
 ``
 
-4.2 Make wp_7787 executable
+5.2 Make wp_7787 executable
 
 ``
 chmod 700 wp_7779
 ``
 
-4.3 configure pubkey.txt inside ~/HdPow/iguana
+5.3 configure pubkey.txt inside ~/HdPow/iguana
+
 You will need to create a `pubkey.txt` file inside `~/HdPoW/iguana directory`. This file will be used to start the dPoW process in the dpowassets script later on. `pubkey.txt` file should contain only the pubkey of the appropriate server. The file should contain only the information in the example below. Change 02a854251adfee222bede8396fed0756985d4ea905f72611740867c7a4ad6488c1 to the appropriate pubkey for the server the file is on.
+
 ``
 pubkey=02a854251adfee222bede8396fed0756985d4ea905f72611740867c7a4ad6488c1
 ``
 
 Remark: the pubkey set on komodo daemon will remain the S4 pubkey so please do not change your start script nor the content of pubkey.txt. UTXO split should be performed using S4 keys and using S3 keys.
 
-4.4 UTXO split
+5.4 UTXO split
 
-5. Launch iguana
+During 3P NN setup, you created a `acsplit` file, you should create a similar `hnsplit` file with port 7787 instead of 7776, see https://docs.komodoplatform.com/notary/split-utxo-for-notarization.html#step-1-create-a-script-named-acsplit for details.
 
-6. Verify that each iguana is able to notarize
+``
+#!/bin/bash
+curl --url "http://127.0.0.1:7787" --data "{\"coin\":\""${1}"\",\"agent\":\"iguana\",\"method\":\"splitfunds\",\"satoshis\":\"10000\",\"sendflag\":1,\"duplicates\":"${2}"}"
+``
+
+You can use the script you want to perform the coinsplits but you'll need UTXO on both S3 and S4 addresses on the same KMD node.
+
+6. Launch iguana
+
+It is recommanded to launch iguana into a screen or tmux.
+
+``
+cd ~/HdPow/iguana
+./m_notary_3rd_party_S3
+``
+
+7. Verify that each iguana is able to notarize
 
 ## different user, same server
 
