@@ -96,12 +96,17 @@ ZILLA | [komodo](https://github.com/komodoplatform/komodo) | 0.5.2 | [![dPOW Sta
 
 # HUSH3 Notary network using KMD code (credits to KMD Team & SuperNET Developers)
 1. Perform the 3P server setup including iguana setup in ~/dPow folder
+
 https://docs.komodoplatform.com/notary/setup-Komodo-Notary-Node.html#_3rd-party-server-setup
+
 ## same user, same server
+
 2. Install and sync HUSH3 on 3P (if not performed during the step 1)
+
 See link mentionned at step 1 for details.
 
 3. Install iguana for Hush3 with the same user
+
 ``
 git clone https://github.com/phm87/dPow -b HushNN HdPow
 ``
@@ -109,6 +114,7 @@ git clone https://github.com/phm87/dPow -b HushNN HdPow
 4. Configure iguana with your S3 key
 
 4.1 Create wp_7787
+
 The Hush3 3rd party server iguana will use the port 7787.
 
 Create wp_7787 file inside the `~/HdPoW/iguana` directory with the same passphrase you used to generate your 3rd Party address/pubkey of S3. The file should look as follows (replace YOUR_VERY_SECURE_PASSPHRASE with your own of S3):
@@ -118,6 +124,7 @@ curl --url "http://127.0.0.1:7787" --data "{\"method\":\"walletpassphrase\",\"pa
 ``
 
 4.2 Make wp_7787 executable
+
 ``
 chmod 700 wp_7779
 ``
