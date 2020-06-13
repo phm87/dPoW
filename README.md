@@ -190,4 +190,10 @@ configure Hush iguana
 
 create .komodo/HUSH3 and place the 2 .conf files
 
+``
+ps aux|grep iguana
+phm87    117967  2.5  0.7 1536012 87920 pts/3   Sl   08:40   0:23 ../agents/iguana 3rd_party
+hush     118610  1.2  0.5 889676 65752 pts/6    Sl   08:53   0:02 ../agents/iguana 3rd_party_S3
+hush     118689  0.0  0.0  14224   924 pts/6    S+   08:56   0:00 grep --color=auto iguana
+``
 
