@@ -100,11 +100,14 @@ https://docs.komodoplatform.com/notary/setup-Komodo-Notary-Node.html#_3rd-party-
 ## same user, same server
 2. Install and sync HUSH3 on 3P (if not performed during the step 1)
 See link mentionned at step 1 for details.
+
 3. Install iguana for Hush3 with the same user
-``shell
+``
 git clone https://github.com/phm87/dPow -b HushNN HdPow
 ``
+
 4. Configure iguana with your S3 key
+
 4.1 Create wp_7787
 The Hush3 3rd party server iguana will use the port 7787.
 
