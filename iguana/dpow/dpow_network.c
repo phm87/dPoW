@@ -1440,7 +1440,7 @@ int32_t dpow_addnotary(struct supernet_info *myinfo,struct dpow_info *dp,char *i
                 ptr[n] = ipbits;
                 if ( iter == 0 && strcmp(ipaddr,myinfo->ipaddr) != 0 )
                 {
-                    retval = nn_connect(myinfo->dpowsock,nanomsg_tcpname(0,str,ipaddr,Notaries_port));
+                    retval = nn_connect(myinfo->dpowsock,nanomsg_tcpname(0,str,ipaddr,17776)); // Port hardcoded to change when more than 14 NN will have join
                     printf("NN_CONNECT to (%s)\n",str);
                     //retval = nn_connect(myinfo->dexsock,nanomsg_tcpname(0,str,ipaddr,DEX_SOCK));
                 }
