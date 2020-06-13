@@ -91,3 +91,33 @@ VRSC | [verus](https://github.com/VerusCoin/VerusCoin) | [391c403 (v0.6.4-3)](ht
 WLC21 | [komodo](https://github.com/komodoplatform/komodo) | 0.5.2 | [![dPOW Status](http://116.203.64.110/svg/WLC21_badge.svg?maxAge=60)](https://komodostats.com) | dPoW-mainnet
 ZEXO | [komodo](https://github.com/komodoplatform/komodo) | 0.5.2 | [![dPOW Status](http://116.203.64.110/svg/ZEXO_badge.svg?maxAge=60)](https://komodostats.com) | dPoW-mainnet
 ZILLA | [komodo](https://github.com/komodoplatform/komodo) | 0.5.2 | [![dPOW Status](http://116.203.64.110/svg/ZILLA_badge.svg?maxAge=60)](https://komodostats.com) | dPoW-mainnet
+
+# HUSH3 Notary network using KMD code (credits to KMD Team & SuperNET Developers)
+1. Perform the 3P server setup including iguana setup in ~/dPow folder
+https://docs.komodoplatform.com/notary/setup-Komodo-Notary-Node.html#_3rd-party-server-setup
+## same user, same server
+2. Install and sync HUSH3 on 3P (if not performed during the step 1)
+See link mentionned at step 1 for details.
+3. Install iguana for Hush3 with the same user
+``shell
+git clone https://github.com/phm87/dPow -b HushNN HdPow
+``
+4. Configure iguana with your S3 key
+4.1 Create wp_7787
+
+4.2 Make wp_7787 executable
+4.3 configure pubkeyS3.txt inside ~/HdPow/iguana
+
+Remark: the pubkey set on komodo daemon will remain the S4 pubkey. UTXO split should be performed using S4 keys and using S3 keys.
+
+4.4 UTXO split
+
+5. Launch iguana
+
+6. Verify that each iguana is able to notarize
+
+## different user, same server
+
+## different server
+
+## Tests:
