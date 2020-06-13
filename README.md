@@ -168,7 +168,7 @@ cd ~/HdPow/iguana
 ## different server
 
 ## Tests:
-### Same server, same user
+### Test1: Same server, same user
 Since S4 did not began yet, I'll use "elected file" of S3 and change the port.
 
 ``
@@ -177,13 +177,17 @@ cp 3rd_party_S4 3rd_party_S3
 
 Unfortunately, 3P iguana stopped to work with the following error:
 
-``NN_CONNECT to (tcp://178.157.14.225:17776)
-blockindex.0 allocate bp for CHIPS ht.6403100 -> KMD
-[4] notarize CHIPS->KMD 0000000000000bdec7812d81d00143185f3a8a0d2a83edfe077872ddc7184cd8 ht.6403100 minsigs.13 duration.300 start.1592080430 MoM[100] 9a83458
-69c949f9abdb87d5150153d8eacc84485065fc6dac3ad430c31442b8e CCid.0
-[CHIPS] : chosen = 0  out of 11 loop.(0)
-PAXWDCRC.5361b524 myind.4 isratify.0 DPOW.CHIPS statemachine checkpoint.6403100 0000000000000bdec7812d81d00143185f3a8a0d2a83edfe077872ddc7184cd8 start.1592080488+dur.300 vs 1592080488 MoM[100] 9a8345869c949f9abdb87d5150153d8eacc84485065fc6dac3ad430c31442b8e
-wrong senderind.22
-wrong senderind.22
-NN_CONNECT to (tcp://178.128.44.221:17776)
+``NN_CONNECT to (tcp://178.128.44.221:17776)
+
 iguana: ../nptl/pthread_mutex_lock.c:352: __pthread_mutex_lock_full: Assertion `INTERNAL_SYSCALL_ERRNO (e, __err) != ESRCH || !robust' failed.``
+
+### Test 2: same server, same KMD node, different user
+create a new linux user
+
+install Hush iguana
+
+configure Hush iguana
+
+create .komodo/HUSH3 and place the 2 .conf files
+
+
