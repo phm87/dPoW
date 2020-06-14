@@ -197,3 +197,10 @@ hush     118610  1.2  0.5 889676 65752 pts/6    Sl   08:53   0:02 ../agents/igua
 hush     118689  0.0  0.0  14224   924 pts/6    S+   08:56   0:00 grep --color=auto iguana
 ``
 
+No iguana crash/stop after 10 hours.
+A notarization happened on Hush3 by iguana 3rd_party_S3 but there is no notarization on other 3P coins by iguana 3rd_party. Maybe SH connectivity issues.
+
+My notary node and other notaries are seeing this print in the logs but it existed prior to my tests according to discord history:
+
+wrong senderind.18
+wrong senderind.63
