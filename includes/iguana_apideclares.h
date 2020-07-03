@@ -167,6 +167,8 @@ ZERO_ARGS(bitcoinrpc,getrawchangeaddress);
 SS_D_I_S(bitcoinrpc,move,fromaccount,toaccount,amount,minconf,comment);
 
 THREE_INTS(iguana,splitfunds,satoshis,duplicates,sendflag);
+FIVE_STRINGS(iguana,signext,ctx,symbol,txhash2,privkey,recoverflag);
+// bitcoin_sign(void *ctx,char *symbol,uint8_t *sig,bits256 txhash2,bits256 privkey,int32_t recoverflag)
 ZERO_ARGS(iguana,makekeypair);
 INT_AND_ARRAY(iguana,rates,unused,quotes);
 TWO_STRINGS(iguana,rate,base,rel);
