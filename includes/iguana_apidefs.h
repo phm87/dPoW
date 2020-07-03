@@ -30,6 +30,7 @@
 #define IGUANA_CFUNC_SSS(agent,name,str,str2,str3) char *agent ## _ ## name(IGUANA_ARGS,char *str,char *str2,char *str3)
 #define IGUANA_CFUNC_SDD(agent,name,str,val,val2) char *agent ## _ ## name(IGUANA_ARGS,char *str,double val,double val2)
 #define IGUANA_CFUNC_SSSS(agent,name,str,str2,str3,str4) char *agent ## _ ## name(IGUANA_ARGS,char *str,char *str2,char *str3,char *str4)
+#define IGUANA_CFUNC_SSSSS(agent,name,str,str2,str3,str4,str5) char *agent ## _ ## name(IGUANA_ARGS,char *str,char *str2,char *str3,char *str4,char *str5)
 #define IGUANA_CFUNC_SSSD(agent,name,str,str2,str3,val) char *agent ## _ ## name(IGUANA_ARGS,char *str,char *str2,char *str3,double val)
 #define IGUANA_CFUNC_SSSDDD(agent,name,str,str2,str3,val,val2,val3) char *agent ## _ ## name(IGUANA_ARGS,char *str,char *str2,char *str3,double val,double val2,double val3)
 #define IGUANA_CFUNC_SSSIII(agent,name,str,str2,str3,val,val2,val3) char *agent ## _ ## name(IGUANA_ARGS,char *str,char *str2,char *str3,int32_t val,int32_t val2,int32_t val3)
@@ -61,6 +62,7 @@
 #define TWO_STRINGS IGUANA_CFUNC_SS
 #define THREE_STRINGS IGUANA_CFUNC_SSS
 #define FOUR_STRINGS IGUANA_CFUNC_SSSS
+#define FIVE_STRINGS IGUANA_CFUNC_SSSSS
 #define STRING_AND_INT IGUANA_CFUNC_SI
 #define STRING_AND_DOUBLE IGUANA_CFUNC_SD
 #define STRING_AND_TWOINTS IGUANA_CFUNC_SII
